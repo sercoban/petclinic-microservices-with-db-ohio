@@ -16,7 +16,7 @@ pipeline {
                     cd infrastructure/qa-k8s-terraform
                     sed -i "s/mattkey/$ANS_KEYPAIR/g" main.tf
                     terraform init
-                    terraform apply -auto-approve -no-colour
+                    terraform apply -auto-approve -no-color
                 """
                 script {
                     echo "Kubernetes Master is not UP and running yet."
